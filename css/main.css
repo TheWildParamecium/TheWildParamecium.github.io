@@ -1,0 +1,47 @@
+.site-header {
+    background-color: #71b5bd;
+    color: #d7faff;
+    height: 100vh;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-header-content {
+    margin: 10px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    align-self: center;
+    box-shadow: #138390 2px 5px 5px;
+}
+
+.site-footer {
+    background-color: #0c8190;
+    color: #ffffff;
+    height: 50vh;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkedin, .github{
+    background-color: #0c8190;
+    color: #ffffff;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+body {
+    margin: 0;
+}
