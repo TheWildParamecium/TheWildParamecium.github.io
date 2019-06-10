@@ -32,11 +32,10 @@
     align-items: center;
 }
 
-.medialink{
+.linkedin, .github{
     background-color: #0c8190;
     color: #ffffff;
     font-family: monospace;
-    font-size: 11pt;
     display: flex;
     flex-direction: column;
     justify-content: left;
