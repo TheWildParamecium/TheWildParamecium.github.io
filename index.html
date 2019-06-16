@@ -5,28 +5,48 @@
         <meta charset="UTF-8" >
         <meta name="theme-color" content="#138390" >
         <meta content="width=device-width, initial-scale=1" name="viewport">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--Css Bulma-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+        <!-- Css personal-->
         <link href="css/main.css" rel="stylesheet">
+        <!-- Vue javascript-->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- Axios javascript-->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </head>
     <body>
-        <header class="site-header">
-                <img class="profile-pic" src="https://media.licdn.com/dms/image/C5103AQGF0B7HaqHb7A/profile-displayphoto-shrink_200_200/0?e=1565222400&v=beta&t=cl2krRe0C-FdyeEms4rTbfFAxPHYBLhMAZWh925oLxA" alt="Image could not be loaded">
-            <div class="site-header-content">
-                    <h5>I'm a biochemist that got interest in applying the power of 
-                        informatics in the field of life, diseases, etc. I'm also an 
-                        enthusiastic of the japanese culture, history and language.
-                    </h5>
+        <div id="app">
+            <header class="site-header">
+                    <img @click="hola()" class="profile-pic" src="https://media.licdn.com/dms/image/C5103AQGF0B7HaqHb7A/profile-displayphoto-shrink_200_200/0?e=1565222400&v=beta&t=cl2krRe0C-FdyeEms4rTbfFAxPHYBLhMAZWh925oLxA" alt="Image could not be loaded">
+                <div class="site-header-content">
+                        <h5 v-if="mostrar">{{description}}</h5>
+                        <h3>{{imprimeFraseRandom}}</h3>
+                        <h4 v-for="hash in hashes"> {{hash.id}}</h4>
+                </div>
+            </header>
+
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-3">
+                        <h3>hola</h3>
+                    </div>
+                    <div class="column has-text-centered">
+                        <p>adios</p>
+                    </div>
+                </div>
             </div>
-        </header>
-        <nav></nav>
-        <article></article>
-        <footer class="site-footer">
-            <h3>Where to find me:</h3>
-            <ul class="site-footer-contact">
-                <li><a href="facts.html">prueba</a></li>
-                <li><a class="linkedin" href="https://www.linkedin.com/in/perezjesus94">Linkedin</a></li>
-                <li><a class="github" href="https://github.com/TheWildParamecium">Github</a></li>
-            </ul>
-        </footer>
+
+            <nav></nav>
+            <article></article>
+            <footer class="site-footer">
+                <h3>Where to find me:</h3>
+                <ul class="site-footer-contact">
+                    <li><a href="facts.html">prueba</a></li>
+                    <li><a class="linkedin" href="https://www.linkedin.com/in/perezjesus94">Linkedin</a></li>
+                    <li><a class="github" href="https://github.com/TheWildParamecium">Github</a></li>
+                </ul>
+            </footer>
+        </div>
+        <script src="js/main.js"></script>
     </body>
 </html>
