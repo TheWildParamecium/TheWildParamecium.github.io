@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
+,  "dev": "lite-server"  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TheWildParamecium/Portfolio.git"
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/TheWildParamecium/Portfolio/issues"
   },
-  "homepage": "https://github.com/TheWildParamecium/Portfolio#readme"
+  "homepage": "https://github.com/TheWildParamecium/Portfolio#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.3"
+  }
 }
