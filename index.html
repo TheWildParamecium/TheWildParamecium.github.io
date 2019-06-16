@@ -1,52 +1,88 @@
 <!DOCTYPE HTML>
 <html lang="en">
-    <head>
-        <title>Jesus Perez</title>
-        <meta charset="UTF-8" >
-        <meta name="theme-color" content="#138390" >
-        <meta content="width=device-width, initial-scale=1" name="viewport">
-        <!--Css Bulma-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-        <!-- Css personal-->
-        <link href="css/main.css" rel="stylesheet">
-        <!-- Vue javascript-->
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <!-- Axios javascript-->
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    </head>
-    <body>
-        <div id="app">
-            <header class="site-header">
-                    <img @click="hola()" class="profile-pic" src="https://media.licdn.com/dms/image/C5103AQGF0B7HaqHb7A/profile-displayphoto-shrink_200_200/0?e=1565222400&v=beta&t=cl2krRe0C-FdyeEms4rTbfFAxPHYBLhMAZWh925oLxA" alt="Image could not be loaded">
-                <div class="site-header-content">
-                        <h5 v-if="mostrar">{{description}}</h5>
-                        <h3>{{imprimeFraseRandom}}</h3>
-                        <h4 v-for="hash in hashes"> {{hash.id}}</h4>
-                </div>
-            </header>
+<head>
+    <title>Jesus Perez</title>
+    <meta charset="UTF-8" >
+    <meta name="theme-color" content="#138390" >
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- Css personal-->
+    <link href="css/main.css" rel="stylesheet">
+    <!-- Vue javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Axios javascript-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="app">
 
-            <div class="container">
-                <div class="columns is-centered">
-                    <div class="column is-3">
-                        <h3>hola</h3>
+        <nav class="navbar navbar-expand-sm deepblue-bg navbar-dark fixed-top">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#"><img src="images/logos/paramecium.jpg"></a>
+            <a class="navbar-brand" href="#">TheWildParamecium</a>
+            <ul class="navbar-nav">
+            <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    <div class="white-font">Language</div>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="white-font deepblue-bg">
+                            <a v-on:click="changeLanguage('sp')" class="dropdown-item" href="#">Spanish</a>
+                            <a v-on:click="changeLanguage('en')" class="dropdown-item" href="#">English</a>
+                            <a v-on:click="changeLanguage('jp')" class="dropdown-item" href="#">Japanese</a>
+                        </div>
                     </div>
-                    <div class="column has-text-centered">
-                        <p>adios</p>
-                    </div>
-                </div>
+                </li>
+            </ul>
+        </nav>
+
+
+        <header class="site-header">
+            <div>
+                <img class="rounded-circle" src="images/profilepic/profilepic2.jpg" alt="Jesus Perez Garcia">
             </div>
 
-            <nav></nav>
-            <article></article>
-            <footer class="site-footer">
-                <h3>Where to find me:</h3>
-                <ul class="site-footer-contact">
-                    <li><a href="facts.html">prueba</a></li>
-                    <li><a class="linkedin" href="https://www.linkedin.com/in/perezjesus94">Linkedin</a></li>
-                    <li><a class="github" href="https://github.com/TheWildParamecium">Github</a></li>
-                </ul>
-            </footer>
-        </div>
-        <script src="js/main.js"></script>
-    </body>
+            <div class="site-header-content">
+                <h5>{{showContent}}</h5>
+            </div>
+        </header>
+
+        <footer class="site-footer">
+            <h5>{{showMedia}}</h5>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/perezjesus94/">
+                        <img class="rounded img-fluid" src="images/logos/linkedin.png" alt="linkedin">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/TheWildParamecium">
+                        <img class="rounded img-fluid" src="images/logos/github3.png" alt="github">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/JesusViewty">
+                        <img class="rounded img-fluid" src="images/logos/twitter.png" alt="twitter">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/jesus.perez.garcia.bioch">
+                        <img class="rounded img-fluid" src="images/logos/facebook.png" alt="facebook">
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+    </div> <!-- id=app-->
+
+
+    <!-- Jquery, Popperjs y Bootstrap scripts -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- script personal-->
+    <script src="js/main.js"></script>
+</body>
 </html>

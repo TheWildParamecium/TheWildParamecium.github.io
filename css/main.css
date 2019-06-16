@@ -1,7 +1,7 @@
 .site-header {
     background-color: #71b5bd;
     color: #d7faff;
-    height: 100vh;
+    height: 120vh;
     font-family: monospace;
     display: flex;
     flex-direction: column;
@@ -21,6 +21,16 @@
     box-shadow: #138390 2px 5px 5px;
 }
 
+.deepblue-bg {
+    background-color: #0c8190
+}
+
+.white-font{
+    color: #ffffff
+}
+
+.nav_height {}
+
 .site-footer {
     background-color: #0c8190;
     color: #ffffff;
@@ -32,15 +42,6 @@
     align-items: center;
 }
 
-.linkedin, .github, .prueba{
-    background-color: #0c8190;
-    color: #ffffff;
-    font-family: monospace;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: center;
-}
 
 body {
     margin: 0;
